@@ -1,7 +1,7 @@
 javascript: (async()=>{
 let all=document.body.querySelectorAll('.tl');
 for (var i=0;i<all.length;i++){
-var t=await translate(a);
+var t=await translate(all[i].textContent);
 all[i].innerHTML=all[i].innerHTML+'<br>'+t;
 }
 
