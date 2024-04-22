@@ -11,7 +11,6 @@ var res=await fetch(url);
 var raw=await res.json();
 var ts='';
 for (var j=0;j<raw[0].length;j++){
-    if (raw[0][j]!==undefined){
     ts=ts+raw[0][j][0];
 }
     return ts
