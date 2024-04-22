@@ -6,7 +6,7 @@ all[i].innerHTML=all[i].innerHTML+'<br>'+t;
 }
 
 async function translate(a){
-var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=auto&tl=zh-TW&q='+a.replaceAll('%','%25').replaceAll('#','%23');
+var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=auto&tl=zh-TW&q='+a.replace(/%25/g,'%25').replace(/%23/g,'%23');
 var res=await fetch(url);
 var raw=await res.json();
 var ts='';
