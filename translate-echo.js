@@ -6,7 +6,7 @@ all[i].innerHTML=all[i].innerHTML+'<br>'+t;
 }
 
 async function translate(a){
-var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=auto&tl=zh-TW&q='+escape(a);
+var url = 'https://translate.googleapis.com/translate_a/single?client=gtx&dt=t&sl=auto&tl=zh-TW&q='+escape(a).replace(/[\u2018\u2019]/g,'\'');
 var res=await fetch(url);
 var raw=await res.json();
 var ts='';
